@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chatterbox</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <form id="login">
+      <h1>Chatterbox</h1>
+      <label>
+        Log in as
+        <select name="username">
+          <option>alice</option>
+          <option>bob</option>
+          <option>carol</option>
+          <option>dave</option>
+        </select>
+      </label>
+      <button>Log in</button>
+    </form>
+
+    <main id="chat" hidden>
+      <aside>
+        <p id="me"></p>
+        <ul id="rooms"></ul>
+        <p id="status">connecting…</p>
+      </aside>
+      <section>
+        <header>
+          <h2 id="room-name"></h2>
+          <button id="leave" type="button" hidden>Leave</button>
+          <button id="join" type="button" hidden>Join</button>
+        </header>
+        <button id="older" type="button" hidden>Load older messages</button>
+        <ul id="messages"></ul>
+        <p id="typing"></p>
+        <form id="composer">
+          <input name="text" autocomplete="off" placeholder="Message" />
+          <button>Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

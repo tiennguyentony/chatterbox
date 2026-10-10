@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; font: 15px/1.4 system-ui, sans-serif; color: #1d1d1f; background: #f5f5f7; }
+#login { max-width: 280px; margin: 15vh auto; display: grid; gap: 12px; }
+#chat { display: grid; grid-template-columns: 220px 1fr; height: 100vh; }
+aside { background: #2b2d42; color: #edf2f4; padding: 16px; }
+aside ul { list-style: none; padding: 0; }
+aside li { padding: 6px 8px; border-radius: 6px; cursor: pointer; display: flex; justify-content: space-between; }
+aside li.active { background: #43465e; }
+aside li.not-member { opacity: 0.6; }
+.badge { background: #ef233c; border-radius: 9px; padding: 0 7px; font-size: 12px; }
+section { display: flex; flex-direction: column; padding: 16px; min-width: 0; }
+header { display: flex; align-items: center; gap: 12px; }
+#messages { flex: 1; overflow-y: auto; list-style: none; padding: 0; }
+.message { padding: 6px 0; }
+.message .author { font-weight: 600; margin-right: 8px; }
+.message time { color: #8d99ae; font-size: 12px; }
+.message.mine .author { color: #2a6fdb; }
+#typing { min-height: 1.4em; color: #8d99ae; font-style: italic; margin: 4px 0; }
+#composer { display: flex; gap: 8px; }
+#composer input { flex: 1; padding: 8px; }
